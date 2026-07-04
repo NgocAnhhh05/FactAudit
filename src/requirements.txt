@@ -1,0 +1,34 @@
+# Core Frameworks
+langgraph>=0.0.26
+langchain-core>=0.1.52
+
+# LLM Integrations
+# - langchain-openai: CHÍNH - ChatOpenAI client gọi llama-cpp-turboquant
+#   qua giao thức OpenAI-compatible API. (Trước v2 thiếu dòng này -> phải thêm)
+langchain-openai>=0.1.20
+# - langchain-google-genai: fallback CLOUD tuỳ chọn (bỏ qua nếu không có
+#   GEMINI_API_KEY). KHÔNG liên quan tới luồng GGUF/llama.cpp.
+langchain-google-genai>=1.0.1
+
+# Tools & Search (src/quality_inspector/tools.py dùng TavilySearch)
+langchain-tavily>=0.1.0
+
+# Utilities
+pydantic>=2.0.0
+python-dotenv>=1.0.0
+typing-extensions>=4.6.0
+# httpx được openai client kéo theo; khai báo rõ để dễ pin version nếu cần.
+httpx>=0.27.0
+
+# ---------------------------------------------------------------------------
+# (ĐÃ XOÁ) langchain-ollama>=0.1.0  -> không còn dùng Ollama nữa (v2).
+# ---------------------------------------------------------------------------
+
+# (Tuỳ chọn) Chỉ cần nếu bạn dùng HuggingFace pipeline ở module nào đó.
+# Không bắt buộc cho luồng GGUF / llama-cpp-turboquant. Bỏ comment nếu cần:
+# transformers
+# accelerate
+# langchain-huggingface
+langsmith
+filelock
+pandas
