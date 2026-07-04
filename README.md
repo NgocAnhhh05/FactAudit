@@ -125,7 +125,7 @@ cmake --build . --config Release -j$(nproc)
 * **Terminal 1 (Model A Baseline Server):**
 ```bash
 cd ~/llama-cpp-turboquant/build
-./bin/llama-server --host 0.0.0.0 --port 8080 --model "/home/ngocanhdoan1092005/Factaudit/models/Qwen2.5-32B-Instruct-Q4_K_M.gguf" --alias Qwen2.5-32B-Instruct-Q4_K_M --threads 8 --n-gpu-layers 45 --ctx-size 8192 --cache-type-k f32 --cache-type-v f32 --metrics
+./bin/llama-server --host 0.0.0.0 --port 8080 --model "./Factaudit/models/Qwen2.5-32B-Instruct-Q4_K_M.gguf" --alias Qwen2.5-32B-Instruct-Q4_K_M --threads 8 --n-gpu-layers 45 --ctx-size 8192 --cache-type-k f32 --cache-type-v f32 --metrics
 
 ```
 
@@ -133,7 +133,7 @@ cd ~/llama-cpp-turboquant/build
 * **Terminal 2 (Model B Baseline Server - Chạy ngầm trong `tmux new -s target_baseline`):**
 ```bash
 cd ~/llama-cpp-turboquant/build
-./bin/llama-server --host 0.0.0.0 --port 8082 --model "/home/ngocanhdoan1092005/Factaudit/models/Qwen3-14B-Q4_K_M.gguf" --alias Qwen3-14B-Q4_K_M --threads 8 --n-gpu-layers 15 --ctx-size 8192 --cache-type-k f32 --cache-type-v f32 --metrics
+./bin/llama-server --host 0.0.0.0 --port 8082 --model "./Factaudit/models/Qwen3-14B-Q4_K_M.gguf" --alias Qwen3-14B-Q4_K_M --threads 8 --n-gpu-layers 15 --ctx-size 8192 --cache-type-k f32 --cache-type-v f32 --metrics
 
 ```
 
@@ -146,7 +146,7 @@ cd ~/llama-cpp-turboquant/build
 * **Terminal 1 (Model A TurboQuant Server):**
 ```bash
 cd ~/llama-cpp-turboquant/build
-./bin/llama-server --host 0.0.0.0 --port 8081 --model "/home/ngocanhdoan1092005/Factaudit/models/Qwen2.5-32B-Instruct-Q4_K_M.gguf" --alias Qwen2.5-32B-Instruct-Q4_K_M --threads 8 --n-gpu-layers 45 --ctx-size 32768 --cache-type-k turbo3 --cache-type-v turbo4 --metrics
+./bin/llama-server --host 0.0.0.0 --port 8081 --model "./Factaudit/models/Qwen2.5-32B-Instruct-Q4_K_M.gguf" --alias Qwen2.5-32B-Instruct-Q4_K_M --threads 8 --n-gpu-layers 45 --ctx-size 32768 --cache-type-k turbo3 --cache-type-v turbo4 --metrics
 
 ```
 
@@ -154,7 +154,7 @@ cd ~/llama-cpp-turboquant/build
 * **Terminal 2 (Model B TurboQuant Server - Chạy ngầm trong `tmux new -s target_turboquant`):**
 ```bash
 cd ~/llama-cpp-turboquant/build
-./bin/llama-server --host 0.0.0.0 --port 8083 --model "/home/ngocanhdoan1092005/Factaudit/models/Qwen3-14B-Q4_K_M.gguf" --alias Qwen3-14B-Q4_K_M --threads 8 --n-gpu-layers 15 --ctx-size 32768 --cache-type-k turbo3 --cache-type-v turbo4 --metrics
+./bin/llama-server --host 0.0.0.0 --port 8083 --model "./Factaudit/models/Qwen3-14B-Q4_K_M.gguf" --alias Qwen3-14B-Q4_K_M --threads 8 --n-gpu-layers 15 --ctx-size 32768 --cache-type-k turbo3 --cache-type-v turbo4 --metrics
 
 ```
 
