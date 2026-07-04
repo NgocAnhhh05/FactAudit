@@ -378,7 +378,7 @@ def run_fact_audit(args):
                         print(f"   -> 🔄 Đã chốt kịch bản mới: {new_task}")
                         print(f"   -> Bắt đầu vòng lặp tiến hóa tiếp theo...")
 
-        from Factaudit.src.compute_metrics import calculate_fact_audit_metrics
+        from src.compute_metrics import calculate_fact_audit_metrics
         calculate_fact_audit_metrics()
     except Exception as e:
         print(f"\n❌ LỖI TRONG QUÁ TRÌNH CHẠY: {e}")
