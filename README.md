@@ -1,16 +1,16 @@
 # FACT-AUDIT: Multi-Agent System for Fact-Checking & LLM Vulnerability Assessment
 
-FACT-AUDIT là một framework kiểm toán tự động sử dụng kiến trúc Multi-Agent (LangGraph) để đánh giá lỗ hổng, kiểm tra tính xác thực dữ liệu và chấm điểm các mô hình ngôn ngữ lớn (Target LLM)[cite: 2]. Hệ thống hoạt động theo mô hình Client-Server tách biệt, sử dụng `llama-cpp-turboquant` làm backend inference hiệu năng cao và loại bỏ hoàn toàn dependency vào Ollama[cite: 2, 4].
+FACT-AUDIT là một framework kiểm toán tự động sử dụng kiến trúc Multi-Agent (LangGraph) để đánh giá lỗ hổng, kiểm tra tính xác thực dữ liệu và chấm điểm các mô hình ngôn ngữ lớn (Target LLM). Hệ thống hoạt động theo mô hình Client-Server tách biệt, sử dụng `llama-cpp-turboquant` làm backend inference hiệu năng cao và loại bỏ hoàn toàn dependency vào Ollama.
 
 ---
 
 ## 🏗️ Kiến Trúc Hệ Thống
 
-Hệ thống điều phối luồng xử lý thông qua 5 Agents cốt lõi kết hợp với mô hình Target LLM[cite: 2]:
+Hệ thống điều phối luồng xử lý thông qua 5 Agents cốt lõi kết hợp với mô hình Target LLM:
 1. **Appraiser Agent**: Phân tích ngữ cảnh, lập kịch bản kiểm tra độc lập.
 2. **Prober Agent**: Tạo các test-case thử nghiệm cấu trúc/bảo mật.
 3. **Inquirer Agent**: Thực thi các câu hỏi, giám sát phản hồi.
-4. **Quality Inspector Agent**: Xác minh chéo thông tin bằng cách kết hợp với công cụ tìm kiếm bên ngoài (Tavily Search)[cite: 3].
+4. **Quality Inspector Agent**: Xác minh chéo thông tin bằng cách kết hợp với công cụ tìm kiếm bên ngoài (Tavily Search).
 5. **Evaluator Agent**: Đánh giá câu trả lời, bỏ phiếu chấm điểm và trích xuất số liệu Metrics (Grade, IMR, JFR).
 
 
@@ -43,7 +43,7 @@ Hệ thống điều phối luồng xử lý thông qua 5 Agents cốt lõi kế
 
 ## ⚙️ Cấu Hình Hệ Thống (`.env`)
 
-Tạo file `.env` tại thư mục gốc của dự án với nội dung cấu hình như sau[cite: 2, 4]:
+Tạo file `.env` tại thư mục gốc của dự án với nội dung cấu hình như sau:
 
 ```env
 # 1. API KEYS
