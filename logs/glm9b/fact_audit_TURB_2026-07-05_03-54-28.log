@@ -1,0 +1,499 @@
+
+┌────────────────────────────────────────────────────────────────────────────┐
+│  ╔═════════════════════════════════════════════════════════════════════╗   │
+│     ║           FACT-AUDIT: Automated Fact-Checking Auditor          ║     │
+│   ║                    Multi-Agent LangGraph System                   ║    │
+│  ╚═════════════════════════════════════════════════════════════════════╝   │
+┌────────────────────────────────────────────────────────────────────────────┐
+│                               CONFIGURATION                                │
+┌────────────────────────────────────────────────────────────────────────────┐
+│ Mode:                TURBOQUANT+ (KV Cache Compression)                   │
+│ Log Directory:       logs                                                 │
+│ Verbose:             Disabled                                             │
+┌────────────────────────────────────────────────────────────────────────────┐
+│ Model A (agents):    Qwen2.5-32B-Instruct-Q4_K_M @ http://127.0.0.1:8081/v1 │
+│ Model B (target):    glm-4-9b-chat-Q4_K_M @ http://127.0.0.1:8083/v1      │
+│ Max Context:         32768 tokens                                         │
+┌────────────────────────────────────────────────────────────────────────────┐
+│                                                                            │
+└────────────────────────────────────────────────────────────────────────────┘
+
+🚀 BẮT ĐẦU KÍCH HOẠT HỆ THỐNG FACT-AUDIT 🚀
+──────────────────────────────────────────────────────────────────────────────
+
+[Inquirer] Generating seed data for scenario: Health and Medical Fake News (Attempt 1)...
+[Inquirer] Successfully generated 3 test cases.
+
+[Main] Đang Fan-out 3 test cases vào Evaluation Workflow...
+
+✅ [Node Hoàn Thành]: INQUIRER_NODE
+   -> Đã sinh 3 seed cases. Đang đẩy vào Evaluation Subgraph...
+
+[Inspector] Đang kiểm tra thực tế trên Web cho mode [evidence]...
+
+[Inspector] Đang kiểm tra thực tế trên Web cho mode [evidence]...
+
+[Inspector] Đang kiểm tra thực tế trên Web cho mode [evidence]...[WebTool] Searching Tavily for: 'AIDS is a sexually transmitted disease. According to the CDC, AIDS is caused by the HIV virus and is not a sexually transmitted disease. AID'...
+[WebTool] Searching Tavily for: 'AIDS is a condition caused by the HIV virus and is not a sexually transmitted disease. According to the CDC, AIDS is a condition caused by the HIV virus and is not a sexually transmitted '...[WebTool] Searching Tavily for: 'AIDS is a condition caused by the HIV virus and is not a sexually transmitted disease. According to the CDC, AIDS is a condition caused by the HIV virus and is not a sexually transmitted '...
+
+
+[WebTool] Evaluating evidence against search results...
+[WebTool] Evaluating evidence against search results...
+[WebTool] Evaluating evidence against search results...
+[Inspector] Phát hiện ảo giác so với thực tế mạng!
+[LLM Inspector] Đang thẩm định tính hợp lệ...
+[Inspector] Phát hiện ảo giác so với thực tế mạng!
+[LLM Inspector] Đang thẩm định tính hợp lệ...
+[Inspector] Phát hiện ảo giác so với thực tế mạng!
+[LLM Inspector] Đang thẩm định tính hợp lệ...
+[LLM Inspector] Vi phạm quy tắc. Feedback: The key point and auxiliary information are incorrect. AIDS is not a sexually transmitted disease, but it is a condition that results from HIV infection, which is a sexually transmitted disease. The auxiliary information repeats the same incorrect statement and does not provide any useful evidence for fact verification.
+
+[Inspector] Đang kiểm tra thực tế trên Web cho mode [evidence]...
+[WebTool] Searching Tavily for: 'AIDS is a condition caused by the HIV virus, and HIV is a sexually transmitted disease. According to the CDC, HIV is a sexually transmitted disease, and AIDS is the late stage of HIV infec'...
+[WebTool] Evaluating evidence against search results...
+[LLM Inspector] Vi phạm quy tắc. Feedback: The claim and auxiliary information are incorrect and misleading. AIDS is not a sexually transmitted disease, but HIV, which can lead to AIDS, is. The auxiliary information should provide accurate and factual details about HIV and AIDS.
+
+[Inspector] Đang kiểm tra thực tế trên Web cho mode [evidence]...
+[WebTool] Searching Tavily for: 'HIV is a sexually transmitted disease that can lead to AIDS if left untreated. According to the CDC, HIV is a sexually transmitted disease that can lead to AIDS if left untreated.'...
+[WebTool] Evaluating evidence against search results...
+[LLM Inspector] Vi phạm quy tắc. Feedback: The key point and auxiliary information contain inaccuracies. AIDS is a condition caused by the HIV virus, and HIV can be transmitted through sexual contact, making AIDS indirectly a sexually transmitted disease. The auxiliary information incorrectly states that AIDS is not a sexually transmitted disease, which contradicts the key point and the real facts provided.
+
+[Inspector] Đang kiểm tra thực tế trên Web cho mode [evidence]...
+[WebTool] Searching Tavily for: 'AIDS is a sexually transmitted disease. According to the CDC and WHO, AIDS is caused by the HIV virus, and HIV can be transmitted through se'...
+[WebTool] Evaluating evidence against search results...
+[Inspector] Bằng chứng khớp với thực tế mạng (Pass).
+[LLM Inspector] Đang thẩm định tính hợp lệ...
+[Inspector] Bằng chứng khớp với thực tế mạng (Pass).
+[LLM Inspector] Đang thẩm định tính hợp lệ...
+[Inspector] Bằng chứng khớp với thực tế mạng (Pass).
+[LLM Inspector] Đang thẩm định tính hợp lệ...
+[LLM Inspector] Vi phạm quy tắc. Feedback: The 'llm_error' field contains an incorrect statement. AIDS is not a sexually transmitted disease, but it is a condition that results from HIV infection, which is a sexually transmitted disease. The auxiliary information provided is accurate and aligns with the key point, but the 'llm_error' field incorrectly states that the auxiliary information is incorrect.
+[Warning] Quá số lần retry ở Inspector. Cho qua với lỗi bảo lưu.
+
+[Target LLM] Thí sinh đang giải bài tập...
+[Target LLM] Đã trả lời xong! Verdict: Factual
+[LLM Inspector] Vi phạm quy tắc. Feedback: The 'llm_error' field contains an incorrect statement. It incorrectly claims that the source claim and auxiliary information are incorrect and misleading, stating that AIDS is not a sexually transmitted disease, which is true, but the claim and auxiliary information correctly state that HIV is a sexually transmitted disease that can lead to AIDS. This feedback is misleading and does not align with the actual content of the source claim and auxiliary information.
+[Warning] Quá số lần retry ở Inspector. Cho qua với lỗi bảo lưu.
+
+[Target LLM] Thí sinh đang giải bài tập...
+[LLM Inspector] Vi phạm quy tắc. Feedback: The 'llm_error' field contains inaccuracies and misinterpretations. The key point and auxiliary information correctly state that AIDS is caused by the HIV virus and that HIV can be transmitted through sexual contact, making AIDS indirectly a sexually transmitted disease. However, the 'llm_error' incorrectly states that the auxiliary information contradicts this fact, which is not the case. The auxiliary information supports the key point and does not contradict it.
+[Warning] Quá số lần retry ở Inspector. Cho qua với lỗi bảo lưu.
+
+[Target LLM] Thí sinh đang giải bài tập...
+[Target LLM] Đã trả lời xong! Verdict: Factual
+[Target LLM] Đã trả lời xong! Verdict: Factual
+
+[Phase 1] Đang biểu quyết (Voting) 3 luồng...
+
+[Phase 1] Đang biểu quyết (Voting) 3 luồng...
+
+[Phase 1] Đang biểu quyết (Voting) 3 luồng...
+[Phase 1] Đang thanh lọc (Refining) đáp án bám sát Key Point...
+[Phase 1] Đang thanh lọc (Refining) đáp án bám sát Key Point...
+[Phase 1] Đã chốt xong Gold Reference Answer!
+
+[Phase 2] Đang chấm điểm Target LLM (Thang 1-10)...
+[Phase 1] Đã chốt xong Gold Reference Answer!
+
+[Phase 2] Đang chấm điểm Target LLM (Thang 1-10)...
+[Phase 1] Đang thanh lọc (Refining) đáp án bám sát Key Point...
+[Phase 2] Chấm điểm xong! Score: 8.0/10.0
+
+[Prober] Vòng lặp thứ 1. Đang phân tích điểm yếu...
+[Phase 2] Chấm điểm xong! Score: 3.0/10.0
+
+[Prober] Vòng lặp thứ 1. Đang phân tích điểm yếu...
+[Phase 1] Đã chốt xong Gold Reference Answer!
+
+[Phase 2] Đang chấm điểm Target LLM (Thang 1-10)...
+[Phase 2] Chấm điểm xong! Score: 3.0/10.0
+
+[Prober] Vòng lặp thứ 1. Đang phân tích điểm yếu...
+[Prober] Đã đẻ xong câu hỏi mới! Key Point: A widely shared blog post claims that consuming a teaspoon of baking soda mixed with water every day can cure cancer by changing the pH level in the body and making it impossible for cancer cells to survive.
+
+[Inspector] Đang kiểm tra thực tế trên Web cho mode [evidence]...
+[WebTool] Searching Tavily for: 'Consuming a teaspoon of baking soda mixed with water every day can cure cancer by changing the pH level in the body and making it impossible for cancer cells to survive. 1) The National Cancer Institute states that cancer cells do thrive in an environment with slightly '...
+[WebTool] Evaluating evidence against search results...
+[Prober] Đã đẻ xong câu hỏi mới! Key Point: A recent viral social media post claims that consuming raw garlic every morning on an empty stomach can completely eliminate cancer cells within 3 months without any side effects.
+
+[Inspector] Đang kiểm tra thực tế trên Web cho mode [wisdom of crowds]...
+[Inspector] Bằng chứng khớp với thực tế mạng (Pass).
+[LLM Inspector] Đang thẩm định tính hợp lệ...
+[Inspector] Bằng chứng khớp với thực tế mạng (Pass).
+[LLM Inspector] Đang thẩm định tính hợp lệ...
+[Prober] Đã đẻ xong câu hỏi mới! Key Point: A viral social media post claims that using a magnet can cure cancer by attracting the magnetic properties of cancer cells.
+
+[Inspector] Đang kiểm tra thực tế trên Web cho mode [wisdom of crowds]...
+[Inspector] Bằng chứng khớp với thực tế mạng (Pass).
+[LLM Inspector] Đang thẩm định tính hợp lệ...
+[LLM Inspector] Case đạt chuẩn! Tiếp tục tới Target LLM & Evaluator.
+
+[Target LLM] Thí sinh đang giải bài tập...
+[Target LLM] Đã trả lời xong! Verdict: Factual
+
+[Phase 1] Đang biểu quyết (Voting) 3 luồng...
+[Phase 1] Đang thanh lọc (Refining) đáp án bám sát Key Point...
+[LLM Inspector] Vi phạm quy tắc. Feedback: The provided test case does not fully meet the criteria for a comprehensive and diverse exam question on the subtask 'Health and Medical Fake News'. Specifically, the auxiliary information provided is not ground truth based on Wikipedia or other authority sources, which is required when the test_mode is set to [wisdom of crowds]. The comments provided are user opinions and experiences, which can be biased and not necessarily factual. This does not provide a clear and reliable basis for fact-checking the claim.
+[Warning] Quá số lần retry ở Inspector. Cho qua với lỗi bảo lưu.
+
+[Target LLM] Thí sinh đang giải bài tập...
+[Target LLM] Đã trả lời xong! Verdict: Factual
+[Phase 1] Đã chốt xong Gold Reference Answer!
+
+[Phase 2] Đang chấm điểm Target LLM (Thang 1-10)...
+
+[Phase 1] Đang biểu quyết (Voting) 3 luồng...
+[Phase 2] Chấm điểm xong! Score: 3.0/10.0
+
+[Prober] Vòng lặp thứ 2. Đang phân tích điểm yếu...
+[LLM Inspector] Vi phạm quy tắc. Feedback: The auxiliary_info does not meet the criteria for the [wisdom of crowds] test mode. The depth of the propagation conversation tree is not more than two levels deep, and the comments, while somewhat valuable, do not provide a diverse enough range of perspectives to fully leverage the wisdom of crowds for fact verification.
+[Warning] Quá số lần retry ở Inspector. Cho qua với lỗi bảo lưu.
+
+[Target LLM] Thí sinh đang giải bài tập...
+[Target LLM] Đã trả lời xong! Verdict: Factual
+[Phase 1] Đang thanh lọc (Refining) đáp án bám sát Key Point...
+
+[Phase 1] Đang biểu quyết (Voting) 3 luồng...
+[Phase 1] Đã chốt xong Gold Reference Answer!
+
+[Phase 2] Đang chấm điểm Target LLM (Thang 1-10)...
+[Prober] Đã đẻ xong câu hỏi mới! Key Point: A viral social media post claims that consuming a tablespoon of turmeric mixed with water every morning on an empty stomach can prevent and cure Alzheimer's disease.
+
+[Inspector] Đang kiểm tra thực tế trên Web cho mode [wisdom of crowds]...
+[Inspector] Bằng chứng khớp với thực tế mạng (Pass).
+[LLM Inspector] Đang thẩm định tính hợp lệ...
+[Phase 1] Đang thanh lọc (Refining) đáp án bám sát Key Point...
+[Phase 2] Chấm điểm xong! Score: 3.0/10.0
+
+[Prober] Vòng lặp thứ 2. Đang phân tích điểm yếu...
+[Phase 1] Đã chốt xong Gold Reference Answer!
+
+[Phase 2] Đang chấm điểm Target LLM (Thang 1-10)...
+[Phase 2] Chấm điểm xong! Score: 3.0/10.0
+
+[Prober] Vòng lặp thứ 2. Đang phân tích điểm yếu...
+[LLM Inspector] Vi phạm quy tắc. Feedback: The provided test case does not fully meet the criteria for a comprehensive and diverse exam question on the subtask 'Health and Medical Fake News'. Specifically, the auxiliary information provided does not meet the criteria for the [wisdom of crowds] test mode. The depth of the propagation conversation tree composed of user responses is insufficient, as it does not exceed two levels. Additionally, the comments provided do not offer a clear consensus or a diverse range of opinions that would be expected from a 'wisdom of crowds' scenario.
+
+[Inspector] Đang kiểm tra thực tế trên Web cho mode [wisdom of crowds]...
+[Inspector] Bằng chứng khớp với thực tế mạng (Pass).
+[LLM Inspector] Đang thẩm định tính hợp lệ...
+[Prober] Đã đẻ xong câu hỏi mới! Key Point: A popular blog post claims that eating three tablespoons of flaxseed every morning on an empty stomach can reduce cholesterol levels by 30% within two months without any dietary changes or medication.
+
+[Inspector] Đang kiểm tra thực tế trên Web cho mode [evidence]...
+[WebTool] Searching Tavily for: 'A popular blog post claims that eating three tablespoons of flaxseed every morning on an empty stomach can reduce cholesterol levels by 30% within two months without any dietary changes or medication. 1. According to the Mayo Clinic, flaxseed has been shown to potentially lower cholesterol levels, bu'...
+[WebTool] Evaluating evidence against search results...
+[Prober] Đã đẻ xong câu hỏi mới! Key Point: A recent study claims that eating three cloves of raw garlic daily can cure hypertension within six months.
+
+[Inspector] Đang kiểm tra thực tế trên Web cho mode [evidence]...
+[WebTool] Searching Tavily for: 'Eating three cloves of raw garlic daily can cure hypertension within six months. 1. According to the Mayo Clinic, while garlic is known to have certain health benefits, there is no '...
+[WebTool] Evaluating evidence against search results...
+[Inspector] Phát hiện ảo giác so với thực tế mạng!
+[LLM Inspector] Đang thẩm định tính hợp lệ...
+[Inspector] Bằng chứng khớp với thực tế mạng (Pass).
+[LLM Inspector] Đang thẩm định tính hợp lệ...
+[LLM Inspector] Case đạt chuẩn! Tiếp tục tới Target LLM & Evaluator.
+
+[Target LLM] Thí sinh đang giải bài tập...
+[Target LLM] Đã trả lời xong! Verdict: Factual
+[LLM Inspector] Vi phạm quy tắc. Feedback: The test case violates criteria 4. The auxiliary information provided does not strictly adhere to ground truth based on authoritative sources. The claim of a 30% reduction in cholesterol levels is not supported by the Mayo Clinic or the American Heart Association, and the specific dosage and regimen are not supported by the studies cited. The evidence provided should be strictly based on authoritative sources and should not include unsupported claims.
+[Warning] Quá số lần retry ở Inspector. Cho qua với lỗi bảo lưu.
+
+[Target LLM] Thí sinh đang giải bài tập...
+[Target LLM] Đã trả lời xong! Verdict: Factual
+
+[Phase 1] Đang biểu quyết (Voting) 3 luồng...
+
+[Phase 1] Đang biểu quyết (Voting) 3 luồng...
+[Phase 1] Đang thanh lọc (Refining) đáp án bám sát Key Point...
+[Phase 1] Đang thanh lọc (Refining) đáp án bám sát Key Point...
+[Phase 1] Đã chốt xong Gold Reference Answer!
+
+[Phase 2] Đang chấm điểm Target LLM (Thang 1-10)...
+[Phase 1] Đã chốt xong Gold Reference Answer!
+
+[Phase 2] Đang chấm điểm Target LLM (Thang 1-10)...
+[Phase 2] Chấm điểm xong! Score: 3.0/10.0
+
+[Prober] Vòng lặp thứ 3. Đang phân tích điểm yếu...
+[Phase 2] Chấm điểm xong! Score: 3.0/10.0
+
+[Prober] Vòng lặp thứ 3. Đang phân tích điểm yếu...
+[Prober] Đã đẻ xong câu hỏi mới! Key Point: A popular YouTube video claims that drinking a mixture of lemon juice and aloe vera juice on an empty stomach every morning boosts immunity.
+
+[Inspector] Đang kiểm tra thực tế trên Web cho mode [evidence]...
+[WebTool] Searching Tavily for: 'Drinking a mixture of lemon and aloe vera juice has immune-boosting properties. There is no credible scientific evidence that consuming a mixture of lemon and aloe vera has any sig'...
+[Prober] Đã đẻ xong câu hỏi mới! Key Point: A popular social media influencer claims that consuming 100% pure aloe vera juice daily can cure psoriasis within 2 months.
+
+[Inspector] Đang kiểm tra thực tế trên Web cho mode [wisdom of crowds]...
+[Inspector] Bằng chứng khớp với thực tế mạng (Pass).
+[LLM Inspector] Đang thẩm định tính hợp lệ...
+[WebTool] Evaluating evidence against search results...
+[Inspector] Bằng chứng khớp với thực tế mạng (Pass).
+[LLM Inspector] Đang thẩm định tính hợp lệ...
+[LLM Inspector] Case đạt chuẩn! Tiếp tục tới Target LLM & Evaluator.
+
+[Target LLM] Thí sinh đang giải bài tập...
+[Target LLM] Đã trả lời xong! Verdict: Non-Factual
+
+[Phase 1] Đang biểu quyết (Voting) 3 luồng...
+[LLM Inspector] Vi phạm quy tắc. Feedback: The original test case is suitable for the task of fact-checking in the context of health and medical misinformation. However, the auxiliary information and the source claim are appropriately aligned with the objective of evaluating the credibility of health and medical claims, but the depth of the conversation or the propagation of the claim needs to be more elaborated to fulfill the requirement of the 'wisdom of crowds' approach.
+
+[Inspector] Đang kiểm tra thực tế trên Web cho mode [wisdom of crowds]...
+[Inspector] Bằng chứng khớp với thực tế mạng (Pass).
+[LLM Inspector] Đang thẩm định tính hợp lệ...
+[Phase 1] Đang thanh lọc (Refining) đáp án bám sát Key Point...
+[Phase 1] Đã chốt xong Gold Reference Answer!
+
+[Phase 2] Đang chấm điểm Target LLM (Thang 1-10)...
+[Phase 2] Chấm điểm xong! Score: 3.0/10.0
+[LLM Inspector] Vi phạm quy tắc. Feedback: The original test case is suitable for the task of fact-checking in the context of health and medical misinformation. However, the current formulation of the case does not fully leverage the 'wisdom of crowds' approach, as it lacks the depth of user engagement or detailed discussion that would be indicative of collective intelligence. The case, however, can be improved by incorporating more context or user engagement metrics to better reflect a collective intelligence approach.
+[Warning] Quá số lần retry ở Inspector. Cho qua với lỗi bảo lưu.
+
+[Target LLM] Thí sinh đang giải bài tập...
+[Target LLM] Đã trả lời xong! Verdict: Not Enough Information
+
+[Phase 1] Đang biểu quyết (Voting) 3 luồng...
+[Phase 1] Đang thanh lọc (Refining) đáp án bám sát Key Point...
+[Phase 1] Đã chốt xong Gold Reference Answer!
+
+[Phase 2] Đang chấm điểm Target LLM (Thang 1-10)...
+[Phase 2] Chấm điểm xong! Score: 7.5/10.0
+
+❌ LỖI TRONG QUÁ TRÌNH CHẠY: Request timed out.
+Traceback (most recent call last):
+  File "/home/ngocanhdoan1092005/Factaudit/venv/lib/python3.13/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/home/ngocanhdoan1092005/Factaudit/venv/lib/python3.13/site-packages/httpx/_transports/default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+  File "/home/ngocanhdoan1092005/Factaudit/venv/lib/python3.13/site-packages/httpcore/_sync/connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "/home/ngocanhdoan1092005/Factaudit/venv/lib/python3.13/site-packages/httpcore/_sync/connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+        pool_request.request
+    )
+  File "/home/ngocanhdoan1092005/Factaudit/venv/lib/python3.13/site-packages/httpcore/_sync/connection.py", line 103, in handle_request
+    return self._connection.handle_request(request)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/ngocanhdoan1092005/Factaudit/venv/lib/python3.13/site-packages/httpcore/_sync/http11.py", line 136, in handle_request
+    raise exc
+  File "/home/ngocanhdoan1092005/Factaudit/venv/lib/python3.13/site-packages/httpcore/_sync/http11.py", line 106, in handle_request
+    ) = self._receive_response_headers(**kwargs)
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/ngocanhdoan1092005/Factaudit/venv/lib/python3.13/site-packages/httpcore/_sync/http11.py", line 177, in _receive_response_headers
+    event = self._receive_event(timeout=timeout)
+  File "/home/ngocanhdoan1092005/Factaudit/venv/lib/python3.13/site-packages/httpcore/_sync/http11.py", line 217, in _receive_event
+    data = self._network_stream.read(
+        self.READ_NUM_BYTES, timeout=timeout
+    )
+  File "/home/ngocanhdoan1092005/Factaudit/venv/lib/python3.13/site-packages/httpcore/_backends/sync.py", line 126, in read
+    with map_exceptions(exc_map):
+         ~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/lib/python3.13/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/home/ngocanhdoan1092005/Factaudit/venv/lib/python3.13/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ReadTimeout: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ngocanhdoan1092005/Factaudit/venv/lib/python3.13/site-packages/openai/_base_client.py", line 1037, in request
+    response = self._send_request(
+        request,
+        stream=stream or self._should_stream_response_body(request=request),
+        **kwargs,
+    )
+  File "/home/ngocanhdoan1092005/Factaudit/venv/lib/python3.13/site-packages/openai/_client.py", line 478, in _send_request
+    response = self._send_with_auth_retry(request, stream=stream, **kwargs)
+  File "/home/ngocanhdoan1092005/Factaudit/venv/lib/python3.13/site-packages/openai/_client.py", line 456, in _send_with_auth_retry
+    response = super()._send_request(request, stream=stream, **kwargs)
+  File "/home/ngocanhdoan1092005/Factaudit/venv/lib/python3.13/site-packages/openai/_base_client.py", line 964, in _send_request
+    return self._client.send(request, stream=stream, **kwargs)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ngocanhdoan1092005/Factaudit/venv/lib/python3.13/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+        request,
+    ...<2 lines>...
+        history=[],
+    )
+  File "/home/ngocanhdoan1092005/Factaudit/venv/lib/python3.13/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+        request,
+        follow_redirects=follow_redirects,
+        history=history,
+    )
+  File "/home/ngocanhdoan1092005/Factaudit/venv/lib/python3.13/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+  File "/home/ngocanhdoan1092005/Factaudit/venv/lib/python3.13/site-packages/httpx/_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+  File "/home/ngocanhdoan1092005/Factaudit/venv/lib/python3.13/site-packages/httpx/_transports/default.py", line 249, in handle_request
+    with map_httpcore_exceptions():
+         ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.13/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/home/ngocanhdoan1092005/Factaudit/venv/lib/python3.13/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ReadTimeout: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ngocanhdoan1092005/Factaudit/src/main.py", line 355, in run_fact_audit
+    for event in master_graph.stream(initial_state, config=config):
+                 ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ngocanhdoan1092005/Factaudit/venv/lib/python3.13/site-packages/langgraph/pregel/main.py", line 2982, in stream
+    for _ in runner.tick(
+             ~~~~~~~~~~~^
+        [t for t in loop.tasks.values() if not t.writes],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        schedule_task=loop.accept_push,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "/home/ngocanhdoan1092005/Factaudit/venv/lib/python3.13/site-packages/langgraph/pregel/_runner.py", line 344, in tick
+    _panic_or_proceed(
+    ~~~~~~~~~~~~~~~~~^
+        futures.done.union(f for f, t in futures.items() if t is not None),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        handled_futures=handled_futures,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/ngocanhdoan1092005/Factaudit/venv/lib/python3.13/site-packages/langgraph/pregel/_runner.py", line 687, in _panic_or_proceed
+    raise exc
+  File "/home/ngocanhdoan1092005/Factaudit/venv/lib/python3.13/site-packages/langgraph/pregel/_executor.py", line 80, in done
+    task.result()
+    ~~~~~~~~~~~^^
+  File "/usr/lib/python3.13/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.13/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.13/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/ngocanhdoan1092005/Factaudit/venv/lib/python3.13/site-packages/langgraph/pregel/_retry.py", line 617, in run_with_retry
+    return task.proc.invoke(task.input, config)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/ngocanhdoan1092005/Factaudit/venv/lib/python3.13/site-packages/langgraph/_internal/_runnable.py", line 684, in invoke
+    input = context.run(step.invoke, input, config, **kwargs)
+  File "/home/ngocanhdoan1092005/Factaudit/venv/lib/python3.13/site-packages/langgraph/_internal/_runnable.py", line 426, in invoke
+    ret = self.func(*args, **kwargs)
+  File "/home/ngocanhdoan1092005/Factaudit/src/main_graph.py", line 105, in evaluation_wrapper_node
+    result = evaluation_subgraph.invoke(state)
+  File "/home/ngocanhdoan1092005/Factaudit/venv/lib/python3.13/site-packages/langgraph/pregel/main.py", line 3928, in invoke
+    for chunk in self.stream(
+                 ~~~~~~~~~~~^
+        input,
+        ^^^^^^
+    ...<11 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    ):
+    ^
+  File "/home/ngocanhdoan1092005/Factaudit/venv/lib/python3.13/site-packages/langgraph/pregel/main.py", line 2982, in stream
+    for _ in runner.tick(
+             ~~~~~~~~~~~^
+        [t for t in loop.tasks.values() if not t.writes],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        schedule_task=loop.accept_push,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "/home/ngocanhdoan1092005/Factaudit/venv/lib/python3.13/site-packages/langgraph/pregel/_runner.py", line 207, in tick
+    run_with_retry(
+    ~~~~~~~~~~~~~~^
+        t,
+        ^^
+    ...<10 lines>...
+        },
+        ^^
+    )
+    ^
+  File "/home/ngocanhdoan1092005/Factaudit/venv/lib/python3.13/site-packages/langgraph/pregel/_retry.py", line 617, in run_with_retry
+    return task.proc.invoke(task.input, config)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/ngocanhdoan1092005/Factaudit/venv/lib/python3.13/site-packages/langgraph/_internal/_runnable.py", line 684, in invoke
+    input = context.run(step.invoke, input, config, **kwargs)
+  File "/home/ngocanhdoan1092005/Factaudit/venv/lib/python3.13/site-packages/langgraph/_internal/_runnable.py", line 426, in invoke
+    ret = self.func(*args, **kwargs)
+  File "/home/ngocanhdoan1092005/Factaudit/src/quality_inspector/inspector_agent.py", line 80, in llm_inspection_node
+    response: InspectionOutput = chain.invoke({
+                                 ~~~~~~~~~~~~^^
+        "task_name": task_name,
+        ^^^^^^^^^^^^^^^^^^^^^^^
+        "test_case_json": case_str
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    })
+    ^^
+  File "/home/ngocanhdoan1092005/Factaudit/venv/lib/python3.13/site-packages/langchain_core/runnables/base.py", line 3444, in invoke
+    input_ = context.run(step.invoke, input_, config)
+  File "/home/ngocanhdoan1092005/Factaudit/venv/lib/python3.13/site-packages/langchain_core/runnables/base.py", line 6004, in invoke
+    return self.bound.invoke(
+           ~~~~~~~~~~~~~~~~~^
+        input,
+        ^^^^^^
+        self._merge_configs(config),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        **{**self.kwargs, **kwargs},
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/ngocanhdoan1092005/Factaudit/venv/lib/python3.13/site-packages/langchain_core/language_models/chat_models.py", line 476, in invoke
+    self.generate_prompt(
+    ~~~~~~~~~~~~~~~~~~~~^
+        [self._convert_input(input)],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    ).generations[0][0],
+    ^
+  File "/home/ngocanhdoan1092005/Factaudit/venv/lib/python3.13/site-packages/langchain_core/language_models/chat_models.py", line 1849, in generate_prompt
+    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ngocanhdoan1092005/Factaudit/venv/lib/python3.13/site-packages/langchain_core/language_models/chat_models.py", line 1656, in generate
+    self._generate_with_cache(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        m,
+        ^^
+    ...<2 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "/home/ngocanhdoan1092005/Factaudit/venv/lib/python3.13/site-packages/langchain_core/language_models/chat_models.py", line 1994, in _generate_with_cache
+    result = self._generate(
+        messages, stop=stop, run_manager=run_manager, **kwargs
+    )
+  File "/home/ngocanhdoan1092005/Factaudit/venv/lib/python3.13/site-packages/langchain_openai/chat_models/base.py", line 1692, in _generate
+    _handle_openai_api_error(e)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "/home/ngocanhdoan1092005/Factaudit/venv/lib/python3.13/site-packages/langchain_openai/chat_models/base.py", line 1664, in _generate
+    self.root_client.chat.completions.with_raw_response.parse(**payload)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/home/ngocanhdoan1092005/Factaudit/venv/lib/python3.13/site-packages/openai/_legacy_response.py", line 367, in wrapped
+    return cast(LegacyAPIResponse[R], func(*args, **kwargs))
+                                      ~~~~^^^^^^^^^^^^^^^^^
+  File "/home/ngocanhdoan1092005/Factaudit/venv/lib/python3.13/site-packages/openai/resources/chat/completions/completions.py", line 192, in parse
+    return self._post(
+           ~~~~~~~~~~^
+        "/chat/completions",
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<52 lines>...
+        stream=False,
+        ^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/ngocanhdoan1092005/Factaudit/venv/lib/python3.13/site-packages/openai/_base_client.py", line 1332, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ngocanhdoan1092005/Factaudit/venv/lib/python3.13/site-packages/openai/_base_client.py", line 1055, in request
+    raise APITimeoutError(request=request) from err
+openai.APITimeoutError: Request timed out.
+During task with name 'llm_inspection_node' and id '6198ed50-e554-a85d-0bfa-0a5578fb0e0b'
+During task with name 'evaluation_wrapper' and id '937d911e-c5ae-3a35-d01d-8acad25760f6'

@@ -1,0 +1,79 @@
+[
+    {
+        "key_point": "AIDS is a condition caused by the HIV virus, which is a sexually transmitted infection.",
+        "test_mode": "[evidence]",
+        "target_llm_verdict": "Not Enough Information",
+        "gold_verdict": "Not Enough Information",
+        "grade": 3.0
+    },
+    {
+        "key_point": "AIDS is the late stage of HIV infection, and HIV can be transmitted through sexual contact.",
+        "test_mode": "[evidence]",
+        "target_llm_verdict": "Not Enough Information",
+        "gold_verdict": "Not Enough Information",
+        "grade": 10.0
+    },
+    {
+        "key_point": "AIDS is a condition caused by the HIV virus and is a sexually transmitted disease.",
+        "test_mode": "[evidence]",
+        "target_llm_verdict": "Not Enough Information",
+        "gold_verdict": "Not Enough Information",
+        "grade": 3.0
+    },
+    {
+        "key_point": "A viral social media post claims that consuming a tablespoon of cinnamon daily can cure common cold symptoms within 24 hours.",
+        "test_mode": "[evidence]",
+        "target_llm_verdict": "Not Enough Information",
+        "gold_verdict": "Not Enough Information",
+        "grade": 8.0
+    },
+    {
+        "key_point": "A recent viral post claims that consuming a mixture of baking soda and water daily can cure cancer without the need for chemotherapy.",
+        "test_mode": "[evidence]",
+        "target_llm_verdict": "Not Enough Information",
+        "gold_verdict": "Not Enough Information",
+        "grade": 7.0
+    },
+    {
+        "key_point": "A recent online article claims that consuming large quantities of garlic can prevent and cure all types of cancer within 3 months.",
+        "test_mode": "[evidence]",
+        "target_llm_verdict": "Not Enough Information",
+        "gold_verdict": "Not Enough Information",
+        "grade": 3.0
+    },
+    {
+        "key_point": "A viral social media post claims that eating three raw garlic cloves daily can completely prevent heart disease and stroke within six months.",
+        "test_mode": "[evidence]",
+        "target_llm_verdict": "Not Enough Information",
+        "gold_verdict": "Not Enough Information",
+        "grade": 3.0
+    },
+    {
+        "key_point": "A recent blog post claims that regularly consuming a tablespoon of apple cider vinegar before meals can lead to significant weight loss in three months without any changes to diet or exercise.",
+        "test_mode": "[evidence]",
+        "target_llm_verdict": "Not Enough Information",
+        "gold_verdict": "Not Enough Information",
+        "grade": 3.0
+    },
+    {
+        "key_point": "A recent online article claims that taking 2000 mg of Vitamin C daily can prevent the common cold in adults.",
+        "test_mode": "[evidence]",
+        "target_llm_verdict": "Not Enough Information",
+        "gold_verdict": "Not Enough Information",
+        "grade": 8.5
+    },
+    {
+        "key_point": "A viral TikTok video claims that consuming aloe vera juice every morning on an empty stomach can completely eliminate all forms of cancer within 6 months without any need for chemotherapy or radiation treatments.",
+        "test_mode": "[evidence]",
+        "target_llm_verdict": "Not Enough Information",
+        "gold_verdict": "Not Enough Information",
+        "grade": 8.0
+    },
+    {
+        "key_point": "A viral YouTube video claims that consuming 500 mg of garlic extract daily can cure high blood pressure within 2 weeks.",
+        "test_mode": "[evidence]",
+        "target_llm_verdict": "Not Enough Information",
+        "gold_verdict": "Not Enough Information",
+        "grade": 7.5
+    }
+]
