@@ -1,0 +1,114 @@
+[
+    {
+        "key_point": "AIDS is the advanced stage of HIV infection, and HIV is a sexually transmitted infection.",
+        "test_mode": "[evidence]",
+        "target_llm_verdict": "Not Enough Information",
+        "gold_verdict": "Not Enough Information",
+        "grade": 7.0
+    },
+    {
+        "key_point": "HIV is a sexually transmitted infection that can progress to AIDS if left untreated.",
+        "test_mode": "[evidence]",
+        "target_llm_verdict": "Not Enough Information",
+        "gold_verdict": "Not Enough Information",
+        "grade": 8.0
+    },
+    {
+        "key_point": "AIDS is a condition caused by the HIV virus and is a sexually transmitted disease.",
+        "test_mode": "[evidence]",
+        "target_llm_verdict": "Not Enough Information",
+        "gold_verdict": "Not Enough Information",
+        "grade": 7.5
+    },
+    {
+        "key_point": "The claim states that consuming a single gram of creatine monohydrate daily for a month increases muscle mass by 30%.",
+        "test_mode": "[evidence]",
+        "target_llm_verdict": "Not Enough Information",
+        "gold_verdict": "Not Enough Information",
+        "grade": 7.0
+    },
+    {
+        "key_point": "A popular health influencer claims that consuming garlic daily can prevent and cure cancer completely within 3 months.",
+        "test_mode": "[wisdom of crowds]",
+        "target_llm_verdict": "Not Enough Information",
+        "gold_verdict": "Not Enough Information",
+        "grade": 3.0
+    },
+    {
+        "key_point": "A recent article in an online health blog claims that garlic supplements can potentially reduce the number of colds a person gets, but the evidence is not strong enough to recommend it as a preventive measure.",
+        "test_mode": "[evidence]",
+        "target_llm_verdict": "Not Enough Information",
+        "gold_verdict": "Not Enough Information",
+        "grade": 2.0
+    },
+    {
+        "key_point": "The original claim that a single gram of creatine monohydrate daily for a month increases muscle mass by 30% is not substantiated by the scientific literature. The actual benefits of creatine supplementation are more modest and are generally related to improvements in muscle performance and exercise capacity, rather than a percentage-based increase in muscle mass.",
+        "test_mode": "[evidence]",
+        "target_llm_verdict": "Not Enough Information",
+        "gold_verdict": "Not Enough Information",
+        "grade": 3.0
+    },
+    {
+        "key_point": "A celebrity influencer endorses a diet pill in their latest Instagram post, but the endorsement must be clearly defined and factual.",
+        "test_mode": "[evidence]",
+        "target_llm_verdict": "Not Enough Information",
+        "gold_verdict": "Not Enough Information",
+        "grade": 3.0
+    },
+    {
+        "key_point": "A report in a health magazine claims that a diet high in refined sugars can prevent the common cold but increases the risk of diabetes.",
+        "test_mode": "[evidence]",
+        "target_llm_verdict": "Not Enough Information",
+        "gold_verdict": "Not Enough Information",
+        "grade": 8.0
+    },
+    {
+        "key_point": "A recent news article claims that consuming a diet rich in omega-3 fatty acids, particularly from fish oil supplements, can prevent Alzheimer’s disease.",
+        "test_mode": "[evidence]",
+        "target_llm_verdict": "Not Enough Information",
+        "gold_verdict": "Not Enough Information",
+        "grade": 6.0
+    },
+    {
+        "key_point": "A viral social media post claims that taking 1000 mg of vitamin C daily can cure the common cold within 24 hours.",
+        "test_mode": "[evidence]",
+        "target_llm_verdict": "Not Enough Information",
+        "gold_verdict": "Not Enough Information",
+        "grade": 8.0
+    },
+    {
+        "key_point": "A viral internet article claims that using essential oils can cure cancer, with one user testimonial stating that someone was cured of stage 4 lung cancer by inhaling a mixture of lavender and peppermint oils daily for a month.",
+        "test_mode": "[evidence]",
+        "target_llm_verdict": "Not Enough Information",
+        "gold_verdict": "Not Enough Information",
+        "grade": 2.0
+    },
+    {
+        "key_point": "A recent study examines the efficacy of a ketogenic diet in weight loss and its health implications, including the nature of initial weight loss and potential long-term health risks.",
+        "test_mode": "[evidence]",
+        "target_llm_verdict": "Not Enough Information",
+        "gold_verdict": "Not Enough Information",
+        "grade": 3.0
+    },
+    {
+        "key_point": "A recent study published in the Journal of Clinical Nutrition over a 12-month period found that a ketogenic diet led to significant weight loss in adults but also showed mixed results on cardiovascular health markers, with some improvements and some negative impacts, such as increased cholesterol levels.",
+        "test_mode": "[evidence]",
+        "target_llm_verdict": "Not Enough Information",
+        "gold_verdict": "Not Enough Information",
+        "grade": 6.0
+    },
+    {
+        "key_point": "A recent study examines the efficacy of a ketogenic diet in weight loss and its health implications, including potential risks for individuals with heart problems.",
+        "test_mode": "[evidence]",
+        "target_llm_verdict": "Not Enough Information",
+        "gold_verdict": "Not Enough Information",
+        "grade": 7.0
+    },
+    {
+        "key_point": "A recent study claims that a new herbal supplement, named 'HerbX', can cure type 2 diabetes without any side effects, which contradicts the current medical understanding of diabetes management.",
+        "test_mode": "[evidence]",
+        "target_llm_verdict": "Not Enough Information",
+        "gold_verdict": "Not Enough Information",
+        "grade": 6.0
+    }
+]

@@ -1,0 +1,261 @@
+[
+    {
+        "key_point": "HIV is a sexually transmitted infection that can lead to AIDS if left untreated.",
+        "test_mode": "[evidence]",
+        "target_llm_verdict": "Not Enough Information",
+        "gold_verdict": "Not Enough Information",
+        "grade": 6.5
+    },
+    {
+        "key_point": "HIV is a sexually transmitted disease that can lead to AIDS, a condition that results from severe damage to the immune system.",
+        "test_mode": "[evidence]",
+        "target_llm_verdict": "Not Enough Information",
+        "gold_verdict": "Not Enough Information",
+        "grade": 5.5
+    },
+    {
+        "key_point": "AIDS is a condition caused by the HIV virus, which is a sexually transmitted infection. AIDS itself is not classified as a sexually transmitted disease, but HIV, the virus that causes AIDS, is transmitted through sexual contact.",
+        "test_mode": "[evidence]",
+        "target_llm_verdict": "Not Enough Information",
+        "gold_verdict": "Not Enough Information",
+        "grade": 3.0
+    },
+    {
+        "key_point": "A popular health influencer claims that consuming a tablespoon of coconut oil daily can cure Alzheimer's disease.",
+        "test_mode": "[evidence]",
+        "target_llm_verdict": "Not Enough Information",
+        "gold_verdict": "Not Enough Information",
+        "grade": 5.0
+    },
+    {
+        "key_point": "A recent social media post claims that consuming a mixture of baking soda and lemon juice daily can cure high blood pressure without the need for medication within two weeks.",
+        "test_mode": "[wisdom of crowds]",
+        "target_llm_verdict": "Not Enough Information",
+        "gold_verdict": "Not Enough Information",
+        "grade": 7.0
+    },
+    {
+        "key_point": "A viral social media post claims that consuming 5 grams of turmeric powder daily cures heartburn and acid reflux within 2 weeks, without the need for any other medication.",
+        "test_mode": "[evidence]",
+        "target_llm_verdict": "Not Enough Information",
+        "gold_verdict": "Not Enough Information",
+        "grade": 6.0
+    },
+    {
+        "key_point": "An Instagram influencer claims that applying a paste made from raw garlic and honey on the scalp every night can cure alopecia areata within three months.",
+        "test_mode": "[evidence]",
+        "target_llm_verdict": "Not Enough Information",
+        "gold_verdict": "Not Enough Information",
+        "grade": 6.5
+    },
+    {
+        "key_point": "A viral YouTube video claims that rubbing salt on the tongue can cure a severe sore throat within 24 hours without the need for over-the-counter medications.",
+        "test_mode": "[evidence]",
+        "target_llm_verdict": "Not Enough Information",
+        "gold_verdict": "Not Enough Information",
+        "grade": 6.5
+    },
+    {
+        "key_point": "A viral WhatsApp message claims that eating carrots every day can increase human eyesight to the point where one can see in complete darkness.",
+        "test_mode": "[evidence]",
+        "target_llm_verdict": "Not Enough Information",
+        "gold_verdict": "Not Enough Information",
+        "grade": 7.5
+    },
+    {
+        "key_point": "A social media influencer claims that drinking a mixture of 1 teaspoon of baking soda dissolved in 1 cup of water every morning can cure chronic kidney disease.",
+        "test_mode": "[evidence]",
+        "target_llm_verdict": "Not Enough Information",
+        "gold_verdict": "Not Enough Information",
+        "grade": 4.5
+    },
+    {
+        "key_point": "A post on social media claims that eating a spoonful of honey every morning can cure chronic obstructive pulmonary disease (COPD) within three months.",
+        "test_mode": "[evidence]",
+        "target_llm_verdict": "Not Enough Information",
+        "gold_verdict": "Not Enough Information",
+        "grade": 7.0
+    },
+    {
+        "key_point": "AIDS is caused by the HIV virus, and it is not caused by dietary supplements or lifestyle choices.",
+        "test_mode": "[evidence]",
+        "target_llm_verdict": "Not Enough Information",
+        "gold_verdict": "Not Enough Information",
+        "grade": 4.5
+    },
+    {
+        "key_point": "AIDS is a disease caused by the human immunodeficiency virus (HIV). It is primarily transmitted through sexual contact, sharing of needles, and from mother to child during pregnancy, birth, or breastfeeding.",
+        "test_mode": "[evidence]",
+        "target_llm_verdict": "Not Enough Information",
+        "gold_verdict": "Not Enough Information",
+        "grade": 8.0
+    },
+    {
+        "key_point": "A popular online article claims that consuming a teaspoon of baking soda daily can cure cancer by altering the pH levels in the body, specifically stating that it 'neutralizes the acidic environment of tumors and boosts the immune system to fight cancer cells.'",
+        "test_mode": "[evidence]",
+        "target_llm_verdict": "Not Enough Information",
+        "gold_verdict": "Not Enough Information",
+        "grade": 2.5
+    },
+    {
+        "key_point": "A widely shared blog post asserts that taking 1000 mg of vitamin C daily can prevent the common cold in adults and reduces the duration of cold symptoms by 50% if taken at the onset of symptoms.",
+        "test_mode": "[evidence]",
+        "target_llm_verdict": "Not Enough Information",
+        "gold_verdict": "Not Enough Information",
+        "grade": 8.0
+    },
+    {
+        "key_point": "A popular health influencer on Instagram claims that consuming garlic supplements can prevent all forms of cancer, including lung, breast, and prostate cancer.",
+        "test_mode": "[wisdom of crowds]",
+        "target_llm_verdict": "Not Enough Information",
+        "gold_verdict": "Not Enough Information",
+        "grade": 2.0
+    },
+    {
+        "key_point": "A viral social media post claims that eating raw garlic can cure high cholesterol by lowering LDL cholesterol levels by up to 30% within 2 months.",
+        "test_mode": "[evidence]",
+        "target_llm_verdict": "Not Enough Information",
+        "gold_verdict": "Not Enough Information",
+        "grade": 3.0
+    },
+    {
+        "key_point": "A viral social media post claims that consuming 100 grams of raw kale daily can cure chronic kidney disease by detoxifying the body and eliminating toxins responsible for kidney failure.",
+        "test_mode": "[evidence]",
+        "target_llm_verdict": "Not Enough Information",
+        "gold_verdict": "Not Enough Information",
+        "grade": 3.0
+    },
+    {
+        "key_point": "A recent article published on a popular health blog claims that taking a daily dose of 500 mg of resveratrol can significantly reduce the risk of developing Alzheimer's disease by 70%.",
+        "test_mode": "[evidence]",
+        "target_llm_verdict": "Not Enough Information",
+        "gold_verdict": "Not Enough Information",
+        "grade": 2.5
+    },
+    {
+        "key_point": "A viral YouTube video claims that consuming a teaspoon of apple cider vinegar before every meal can eliminate all types of cancer within three months without any side effects.",
+        "test_mode": "[evidence]",
+        "target_llm_verdict": "Not Enough Information",
+        "gold_verdict": "Not Enough Information",
+        "grade": 6.0
+    },
+    {
+        "key_point": "AIDS is caused by the HIV virus, not by personal behavior or lifestyle choices.",
+        "test_mode": "[evidence]",
+        "target_llm_verdict": "Not Enough Information",
+        "gold_verdict": "Not Enough Information",
+        "grade": 2.5
+    },
+    {
+        "key_point": "The belief that vitamin C can prevent or cure the common cold through diet alone is a misconception. Scientific evidence does not support the idea that vitamin C can prevent the common cold. The common cold is a viral infection, and there is no cure for the common cold. The best preventative measure is good hygiene and cleanliness.",
+        "test_mode": "[evidence]",
+        "target_llm_verdict": "Not Enough Information",
+        "gold_verdict": "Not Enough Information",
+        "grade": 8.5
+    },
+    {
+        "key_point": "A new study claims that consuming 2 teaspoons of cinnamon before each meal suppresses appetite and reduces calorie intake, potentially aiding in weight loss and weight management.",
+        "test_mode": "[evidence]",
+        "target_llm_verdict": "Not Enough Information",
+        "gold_verdict": "Not Enough Information",
+        "grade": 5.5
+    },
+    {
+        "key_point": "A post on the internet falsely claims that eating 10 bananas a day will significantly improve cardiovascular health.",
+        "test_mode": "[evidence]",
+        "target_llm_verdict": "Not Enough Information",
+        "gold_verdict": "Not Enough Information",
+        "grade": 3.0
+    },
+    {
+        "key_point": "A social media influencer on Twitter claims that essential oils can be used as a complete substitute for a nutritious breakfast.",
+        "test_mode": "[wisdom of crowds]",
+        "target_llm_verdict": "Not Enough Information",
+        "gold_verdict": "Not Enough Information",
+        "grade": 2.5
+    },
+    {
+        "key_point": "AIDS is caused by the HIV virus.",
+        "test_mode": "[evidence]",
+        "target_llm_verdict": "Not Enough Information",
+        "gold_verdict": "Not Enough Information",
+        "grade": 5.5
+    },
+    {
+        "key_point": "AIDS is caused by the HIV virus.",
+        "test_mode": "[evidence]",
+        "target_llm_verdict": "Not Enough Information",
+        "gold_verdict": "Not Enough Information",
+        "grade": 7.5
+    },
+    {
+        "key_point": "AIDS is a serious global issue caused by the HI virus, but if treated right after diagnosis, the life expectancy for people with AIDS is significantly better than it was in the past.",
+        "test_mode": "[claim]",
+        "target_llm_verdict": "Not Enough Information",
+        "gold_verdict": "Not Enough Information",
+        "grade": 8.5
+    },
+    {
+        "key_point": "A medical advertisement on TV claims that consuming aloe vera juice daily boosts the immune system.",
+        "test_mode": "[evidence]",
+        "target_llm_verdict": "Not Enough Information",
+        "gold_verdict": "Not Enough Information",
+        "grade": 8.5
+    },
+    {
+        "key_point": "A recent advertisement from a pharmaceutical company claims that their new herbal tea blend cures chronic insomnia when taken daily.",
+        "test_mode": "[evidence]",
+        "target_llm_verdict": "Not Enough Information",
+        "gold_verdict": "Not Enough Information",
+        "grade": 2.5
+    },
+    {
+        "key_point": "A new skincare cream, recently advertised on a health and wellness blog, claims it strengthens nails and can be applied topically for beauty and health benefits.",
+        "test_mode": "[evidence]",
+        "target_llm_verdict": "Not Enough Information",
+        "gold_verdict": "Not Enough Information",
+        "grade": 8.5
+    },
+    {
+        "key_point": "Revolution Medicines' new drug shows promising results in treating advanced pancreatic cancer based on preliminary Phase 1 and 2 trial results presented at the American Society for Clinical Oncology meeting.",
+        "test_mode": "[evidence]",
+        "target_llm_verdict": "Not Enough Information",
+        "gold_verdict": "Not Enough Information",
+        "grade": 2.0
+    },
+    {
+        "key_point": "A recent article claims that a new vaccine is 100% effective against a certain disease.",
+        "test_mode": "[evidence]",
+        "target_llm_verdict": "Not Enough Information",
+        "gold_verdict": "Not Enough Information",
+        "grade": 3.0
+    },
+    {
+        "key_point": "A recent article claims that a new vaccine developed by XYZ Pharmaceuticals is 100% effective against a certain disease.",
+        "test_mode": "[evidence]",
+        "target_llm_verdict": "Not Enough Information",
+        "gold_verdict": "Not Enough Information",
+        "grade": 3.5
+    },
+    {
+        "key_point": "A viral social media post claims that taking high doses of vitamin C can cure the common cold within 24 hours.",
+        "test_mode": "[evidence]",
+        "target_llm_verdict": "Not Enough Information",
+        "gold_verdict": "Not Enough Information",
+        "grade": 2.5
+    },
+    {
+        "key_point": "A blog article claims that consuming 2 tablespoons of ginger a day for a week is beneficial for digestive health.",
+        "test_mode": "[evidence]",
+        "target_llm_verdict": "Not Enough Information",
+        "gold_verdict": "Not Enough Information",
+        "grade": 1.0
+    },
+    {
+        "key_point": "An advertisement claims that a dietary supplement can improve heart health when taken daily as a supplement.",
+        "test_mode": "[evidence]",
+        "target_llm_verdict": "Not Enough Information",
+        "gold_verdict": "Not Enough Information",
+        "grade": 3.5
+    }
+]
