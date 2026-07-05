@@ -11,7 +11,7 @@
 │ Log Directory:       logs                                                 │
 │ Verbose:             Disabled                                             │
 ┌────────────────────────────────────────────────────────────────────────────┐
-│ Model A (agents):    Llama-2-13b-chat-hf-Q4_K_M @ http://127.0.0.1:8081/v1            │
+│ Model A (agents):    Qwen2.5-32B-Instruct-Q4_K_M @ http://127.0.0.1:8081/v1            │
 │ Model B (target):    Llama-2-13b-chat-hf-Q4_K_M @ http://127.0.0.1:8083/v1            │
 │ Max Context:         32768 tokens                                         │
 ┌────────────────────────────────────────────────────────────────────────────┐
