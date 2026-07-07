@@ -7,6 +7,9 @@ FACT-AUDIT là một framework kiểm toán tự động sử dụng kiến trú
 ## 🏗️ Kiến Trúc Hệ Thống
 
 Hệ thống điều phối luồng xử lý thông qua 5 Agents cốt lõi kết hợp với mô hình Target LLM:
+
+Factaudit/img/Hệ thống Multi-Agent Fact-Audit.jpeg
+
 1. **Appraiser Agent**: Phân tích ngữ cảnh, lập kịch bản kiểm tra độc lập.
 2. **Prober Agent**: Tạo các test-case thử nghiệm cấu trúc/bảo mật.
 3. **Inquirer Agent**: Thực thi các câu hỏi, giám sát phản hồi.
