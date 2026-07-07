@@ -487,9 +487,9 @@ class LLMFactory:
         Tạo Target LLM (Model B - hoàn toàn độc lập với các agent).
 
         Usage: Mô hình bị kiểm toán
-        Yêu cầu: Nhiệt độ trung bình (0.6) để simulate user behavior
+        Yêu cầu: Nhiệt độ thấp (0.0) để simulate user behavior
         """
-        temp = float(os.getenv("TEMPERATURE_TARGET", "0.6"))
+        temp = float(os.getenv("TEMPERATURE_TARGET", "0.0"))
 
         llm = self._create_base_llm(self._model_b, temperature=temp)
 
