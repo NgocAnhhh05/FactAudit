@@ -2,7 +2,7 @@
 0.00.120.158 I device_info:
 0.00.309.781 I   - CUDA0   : NVIDIA L4 (22478 MiB, 22286 MiB free)
 0.00.309.798 I   - CPU     : Intel(R) Xeon(R) CPU @ 2.20GHz (64305 MiB, 64305 MiB free)
-0.00.309.946 I system_info: n_threads = 8 (n_threads_batch = 8) / 16 | CUDA : ARCHS = 890 | USE_GRAPHS = 1 | PEER_MAX_BATCH_SIZE = 128 | CPU : SSE3 = 1 | SSSE3 = 1 | AVX = 1 | AVX2 = 1 | F16C = 1 | FMA = 1 | BMI2 = 1 | AVX512 = 1 | AVX512_VNNI = 1 | LLAMAFILE = 1 | OPENMP = 1 | REPACK = 1 | 
+0.00.309.946 I system_info: n_threads = 8 (n_threads_batch = 8) / 16 | CUDA : ARCHS = 890 | USE_GRAPHS = 1 | PEER_MAX_BATCH_SIZE = 128 | CPU : SSE3 = 1 | SSSE3 = 1 | AVX = 1 | AVX2 = 1 | F16C = 1 | FMA = 1 | BMI2 = 1 | AVX512 = 1 | AVX512_VNNI = 1 | LLAMAFILE = 1 | OPENMP = 1 | REPACK = 1 |
 0.00.309.982 I srv  llama_server: n_parallel is set to auto, using n_parallel = 4 and kv_unified = true
 0.00.310.136 I srv          init: using 15 threads for HTTP server
 0.00.310.550 I srv         start: binding port with default address family
@@ -52,7 +52,7 @@ How are you?<|im_end|>
 0.48.125.174 I slot process_sing: id  2 | task -1 | saving idle slot to prompt cache
 0.48.125.175 I slot prompt_clear: id  2 | task -1 | clearing prompt with 0 tokens
 0.55.648.793 I slot print_timing: id  3 | task 0 | prompt processing, n_tokens =    533, progress = 0.76, t =   7.52 s / 70.84 tokens per second
-1.18.266.179 I slot print_timing: id  3 | task 0 | n_decoded =    100, tg =   5.14 t/s
+1.18.266.179 I slot print_timing: id  3 | task 0 | n_decoded =    100, tg =   5.17 t/s
 1.21.407.018 I slot print_timing: id  3 | task 0 | n_decoded =    116, tg =   5.14 t/s
 1.24.557.104 I slot print_timing: id  3 | task 0 | n_decoded =    132, tg =   5.13 t/s
 1.27.603.396 I slot print_timing: id  3 | task 0 | n_decoded =    147, tg =   5.11 t/s

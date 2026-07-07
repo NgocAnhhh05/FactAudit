@@ -52,8 +52,8 @@ How are you?<|im_end|>
 0.54.795.211 I slot process_sing: id  2 | task -1 | saving idle slot to prompt cache
 0.54.795.212 I slot prompt_clear: id  2 | task -1 | clearing prompt with 0 tokens
 1.02.248.982 I slot print_timing: id  3 | task 0 | prompt processing, n_tokens =    533, progress = 0.76, t =   7.45 s / 71.51 tokens per second
-1.24.907.017 I slot print_timing: id  3 | task 0 | n_decoded =    100, tg =   5.09 t/s
-1.27.947.504 I slot print_timing: id  3 | task 0 | n_decoded =    115, tg =   5.07 t/s
+1.24.907.017 I slot print_timing: id  3 | task 0 | n_decoded =    100, tg =   5.06 t/s
+1.27.947.504 I slot print_timing: id  3 | task 0 | n_decoded =    115, tg =   5.06 t/s
 1.30.951.014 I slot print_timing: id  3 | task 0 | n_decoded =    130, tg =   5.06 t/s
 1.33.999.139 I slot print_timing: id  3 | task 0 | n_decoded =    145, tg =   5.05 t/s
 1.36.999.647 I slot print_timing: id  3 | task 0 | n_decoded =    160, tg =   5.04 t/s
